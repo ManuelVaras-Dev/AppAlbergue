@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- BUSCADOR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_search_bar"
+        android:padding="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginHorizontal="20dp">
+
+        <!-- ImageView para el ícono con tamaño controlado -->
+        <ImageView
+            android:id="@+id/icono_lupa"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/buscar"
+            android:contentDescription="Ícono de búsqueda"
+            app:tint="@color/negro"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp" />
+
+        <!-- EditText para el campo de búsqueda -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Buscar productos o categorías"
+            android:textColorHint="#A9A9A9"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:padding="6dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+
+    <!-- Nueva fila para Categorías y los dos íconos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="104dp"
+        android:layout_marginHorizontal="25dp">
+
+        <!-- Texto "Categorías" alineado a la izquierda -->
+
+        <!-- Espacio para los dos íconos alineados a la derecha -->
+        <TextView
+            android:id="@+id/texto_categorias"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="Categorías"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Primer ícono -->
+            <ImageView
+                android:id="@+id/primer_icono"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/carrito"
+                app:tint="@color/verde"
+                android:contentDescription="Primer ícono"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Segundo ícono -->
+            <ImageView
+                android:id="@+id/segundo_icono"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/favorito"
+                app:tint="@color/verde"
+                android:contentDescription="Segundo ícono"
+                android:layout_marginEnd="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Nueva fila para los botones "Todas", "Alimentos", "Medicinas", "Accesorios" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="143dp"
+        android:layout_marginHorizontal="12dp">
+
+        <!-- Botón "Todas" -->
+        <Button
+            android:id="@+id/btn_todas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Todas"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/verde"
+            android:textSize="10sp"
+            android:layout_marginEnd="3dp" />
+
+        <!-- Botón "Alimentos" -->
+        <Button
+            android:id="@+id/btn_alimentos"
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Alimentos"
+            android:textColor="@color/negroclaro"
+            android:backgroundTint="@color/grisclaro"
+            android:textSize="9.5sp"
+            android:layout_marginEnd="3dp" />
+
+        <!-- Botón "Medicinas" -->
+        <Button
+            android:id="@+id/btn_medicinas"
+            android:layout_width="11dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Medicinas"
+            android:textColor="@color/negroclaro"
+            android:backgroundTint="@color/grisclaro"
+            android:textSize="9.1sp"
+            android:layout_marginEnd="3dp" />
+
+        <!-- Botón "Accesorios" -->
+        <Button
+            android:id="@+id/btn_accesorios"
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Accesorios"
+            android:textColor="@color/negroclaro"
+            android:backgroundTint="@color/grisclaro"
+            android:textSize="9.2sp"/>
+    </LinearLayout>
+
+
+    <!-- CUERPO -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:padding="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="105dp" >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/item_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:text="Alimento Adultos"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+
+
+                <ImageView
+                    android:id="@+id/item_image_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/productos_0001"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/item_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Alimento para mascotas de edad adulta \n(imagen rferencial)"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/donate_agregar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Agregar"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="33dp"
+                    android:textColor="@color/blanco"
+                    android:backgroundTint="@color/verde"
+                    android:textSize="17sp"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="75dp"/>
+
+                <Button
+                    android:id="@+id/donate_regresar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Regresar"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/blanco"
+                    android:backgroundTint="@color/anaranjado"
+                    android:textSize="17sp"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="75dp"/>
+
+            </LinearLayout>
+
+
+        </GridLayout>
+
+    </ScrollView>
+
+
+    <!-- Footer menu con íconos y texto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:layout_marginBottom="0dp">
+
+        <!-- Item "INICIO" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/inicio"
+                android:contentDescription="Inicio" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Item "DONAR" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/huellacan"
+                android:contentDescription="Donar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donar"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Item "RESCATE" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/rescate1"
+                android:contentDescription="Rescate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rescate"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Item "MAS" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mas_opciones"
+                android:contentDescription="Más" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Más"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

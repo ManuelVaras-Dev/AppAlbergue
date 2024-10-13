@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/degradado">
+
+    <TextView
+        android:id="@+id/text_verification_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:text="Por favor verifica que eres tú"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/profilePhoto"
+        android:layout_width="229dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/guardia" />
+
+    <TextView
+        android:id="@+id/text_verification_subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Esta cuenta está protegida por verificación en dos pasos. Ingrese el código de 6 dígitos de su aplicación de autenticación."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/etCodigoVerificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Ingrese el código de verificación"
+        android:importantForAccessibility="yes"
+        android:inputType="number"
+        android:maxLength="6"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="139dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Verificar"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/profilePhoto2"
+            android:layout_width="216dp"
+            android:layout_height="236dp"
+            android:layout_marginStart="28dp"
+            android:src="@drawable/perrosolo" />
+    </LinearLayout>
+
+</LinearLayout>
