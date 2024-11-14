@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="18dp"
+        android:layout_marginHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Validación de Datos"
+            android:textColor="@color/blanco"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="@color/verde"
+            android:padding="7dp"
+            android:elevation="4dp"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4" />
+
+    </LinearLayout>
+
+    <!-- CUERPO -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="730dp"
+        android:layout_marginTop="58dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:showDividers="middle">
+
+            <!-- Resumen de la Donación -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@color/white"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp">
+
+                <!-- Título de Sección -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detalle de la Donación"
+                    android:textSize="20sp"
+                    android:textColor="@color/verde"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingVertical="8dp" />
+
+                <!-- Productos a Donar -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Productos a Donar:"
+                    android:textSize="18sp"
+                    android:textColor="@color/negro"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/productos_donados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comida para perros (Cant. 4 bolsas), mantas (Cant. 2 unidades), medicamentos (Cant. 1 caja)"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro"
+                    android:paddingBottom="8dp" />
+
+                <!-- Datos del Donador -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Datos del Donador:"
+                    android:textSize="18sp"
+                    android:textColor="@color/negro"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/nombre_donador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre: Juan Pérez"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro" />
+
+                <TextView
+                    android:id="@+id/contacto_donador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Celular: 923456789"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro"
+                    android:paddingBottom="8dp" />
+
+                <!-- Datos del Albergue -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Datos del Albergue:"
+                    android:textSize="18sp"
+                    android:textColor="@color/negro"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/nombre_albergue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre: Refugio Animal"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro" />
+
+                <TextView
+                    android:id="@+id/responsable_albergue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Responsable: Jose luis dias"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro"
+                    />
+
+                <TextView
+                    android:id="@+id/responsable_celular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Celular: 985988497"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro"
+                    android:paddingBottom="8dp" />
+
+                <!-- Información del Envío -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Información del Envío:"
+                    android:textSize="18sp"
+                    android:textColor="@color/negro"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/direccion_partida"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dirección de Partida: Calle Los Laureles 123"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro" />
+
+                <TextView
+                    android:id="@+id/direccion_entrega"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dirección de Entrega: Av. Refugio 456"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro" />
+
+                <TextView
+                    android:id="@+id/fecha_traslado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de Traslado: 25/12/2024"
+                    android:textSize="15sp"
+                    android:textColor="@color/negro"
+                    android:paddingBottom="8dp" />
+
+            </LinearLayout>
+
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="65dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/donate_continuar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/verde"
+                        android:paddingHorizontal="75dp"
+                        android:paddingVertical="7dp"
+                        android:text="Confirmar donación"
+                        android:textColor="@color/blanco"
+                        android:textSize="17sp" />
+
+                    <Button
+                        android:id="@+id/donate_regresar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/anaranjado"
+                        android:paddingHorizontal="75dp"
+                        android:paddingVertical="7dp"
+                        android:text="          Regresar         "
+                        android:textColor="@color/blanco"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Footer menu con íconos y texto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:layout_marginBottom="0dp">
+
+        <!-- Item "INICIO" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/inicio"
+                android:contentDescription="Inicio" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Item "DONAR" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/huellacan"
+                android:contentDescription="Donar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donar"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Item "RESCATE" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/rescate1"
+                android:contentDescription="Rescate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rescate"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Item "MAS" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mas_opciones"
+                android:contentDescription="Más" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Más"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

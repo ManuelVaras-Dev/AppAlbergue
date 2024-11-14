@@ -24,9 +24,9 @@
             android:layout_marginStart="0dp"
             android:layout_weight="1"
             android:gravity="start"
-            android:text="Lista de Productos"
+            android:text="Lista de Favoritos"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="19sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -34,12 +34,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- ícono favoritos -->
+            <!-- ícono carrito -->
             <ImageView
                 android:id="@+id/segundo_icono"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@drawable/favorito"
+                android:src="@drawable/carrito"
                 app:tint="@color/verde"
                 android:contentDescription="Segundo ícono"
                 android:layout_marginEnd="16dp" />
@@ -113,46 +113,31 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Contador con botones + y - -->
+                <!-- botones agregar y quitar -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <!-- Botón de restar cantidad -->
+                    <!-- Botón de agregar carrito -->
                     <Button
-                        android:id="@+id/button_decrease1"
+                        android:id="@+id/button_agregar1"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/boton_circular"
+                        android:background="@drawable/baseline_add_shopping_cart_24"
                         android:padding="0dp"
-                        android:text="-"
-                        android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <!-- TextView para mostrar la cantidad -->
-                    <TextView
-                        android:id="@+id/product_quantity1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:text="2"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-
-                    <!-- Botón de aumentar cantidad -->
+                    <!-- Botón de quitar -->
                     <Button
-                        android:id="@+id/button_increase1"
+                        android:id="@+id/button_quitar1"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:background="@drawable/boton_circular"
+                        android:background="@drawable/baseline_delete_forever_24"
                         android:padding="0dp"
-                        android:text="+"
-                        android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -210,46 +195,31 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Contador con botones + y - -->
+                <!-- bonones- -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <!-- Botón de restar cantidad -->
+                    <!-- Botón de agregar-->
                     <Button
-                        android:id="@+id/button_decrease2"
+                        android:id="@+id/button_agregar2"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/boton_circular"
+                        android:background="@drawable/baseline_add_shopping_cart_24"
                         android:padding="0dp"
-                        android:text="-"
-                        android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <!-- TextView para mostrar la cantidad -->
-                    <TextView
-                        android:id="@+id/product_quantity2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:text="1"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-
-                    <!-- Botón de aumentar cantidad -->
+                    <!-- Botón de quitar -->
                     <Button
-                        android:id="@+id/button_increase2"
+                        android:id="@+id/button_quitar2"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:background="@drawable/boton_circular"
+                        android:background="@drawable/baseline_delete_forever_24"
                         android:padding="0dp"
-                        android:text="+"
-                        android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -306,46 +276,32 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Contador con botones + y - -->
+                <!-- botones- -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <!-- Botón de restar cantidad -->
+                    <!-- Botón de agregar -->
                     <Button
-                        android:id="@+id/button_decrease3"
+                        android:id="@+id/button_agregar3"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/boton_circular"
+                        android:background="@drawable/baseline_add_shopping_cart_24"
                         android:padding="0dp"
-                        android:text="-"
-                        android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <!-- TextView para mostrar la cantidad -->
-                    <TextView
-                        android:id="@+id/product_quantity3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:text="3"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
 
-                    <!-- Botón de aumentar cantidad -->
+                    <!-- Botón de quitar-->
                     <Button
-                        android:id="@+id/button_increase3"
+                        android:id="@+id/button_quitar3"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:background="@drawable/boton_circular"
+                        android:background="@drawable/baseline_delete_forever_24"
                         android:padding="0dp"
-                        android:text="+"
-                        android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -371,7 +327,7 @@
         android:columnCount="1"
         android:padding="47dp"
         android:layout_gravity="center"
-        android:layout_marginTop="215dp"  >
+        android:layout_marginTop="200dp"  >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -381,18 +337,6 @@
             android:layout_weight="1">
 
 
-            <Button
-                android:id="@+id/donate_continuar"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:text="Continuar"
-                android:layout_gravity="center"
-                android:layout_marginTop="0dp"
-                android:textColor="@color/blanco"
-                android:backgroundTint="@color/verde"
-                android:textSize="17sp"
-                android:paddingVertical="7dp"
-                android:paddingHorizontal="75dp"/>
 
             <Button
                 android:id="@+id/donate_regresar"
