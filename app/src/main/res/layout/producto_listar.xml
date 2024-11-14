@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFA500"> <!-- Color naranja -->
+
+    <!-- Título "Listado de Productos" centrado -->
+    <TextView
+        android:id="@+id/text_listado_productos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listado de Productos"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Campo de búsqueda -->
+    <EditText
+        android:id="@+id/edit_text_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar productos"
+        android:layout_below="@id/text_listado_productos"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background2" />
+
+    <!-- Lista de productos -->
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/button_add_product"
+        android:layout_below="@id/edit_text_search"
+        android:layout_margin="16dp" />
+
+    <!-- Botón "Agregar Producto" en la parte inferior -->
+    <Button
+        android:id="@+id/button_add_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Producto"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:background="@drawable/button_square_shape"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFA500"> <!-- Color naranja -->
+
+        <!-- Botón "Cancelar" en la esquina superior izquierda -->
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp" />
+
+        <!-- Texto "Editar Local" centrado -->
+        <TextView
+            android:id="@+id/text_editar_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Local"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp" />
+
+        <!-- Opción para subir imágenes debajo del texto -->
+        <Button
+            android:id="@+id/button_subir_imagen"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Subir Imagen"
+            android:layout_below="@id/text_editar_local"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/button_square_shape"
+            android:textColor="#FFFFFF" />
+
+        <!-- ImageView para mostrar la imagen seleccionada -->
+        <ImageView
+            android:id="@+id/image_view_local"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/button_subir_imagen"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Imagen del Local"
+            android:scaleType="centerCrop"
+            android:visibility="gone" /> <!-- Oculto inicialmente -->
+
+        <!-- Campo para Local -->
+        <TextView
+            android:id="@+id/text_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/image_view_local"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <EditText
+            android:id="@+id/edittext_local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Descripción del local"
+            android:layout_below="@id/text_local"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background2" />
+
+        <!-- Campo para Dirección -->
+        <TextView
+            android:id="@+id/text_direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/edittext_local"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <EditText
+            android:id="@+id/edittext_direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Dirección"
+            android:layout_below="@id/text_direccion"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background2" />
+
+        <!-- Campo para Distrito -->
+        <TextView
+            android:id="@+id/text_distrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distrito"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/edittext_direccion"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <EditText
+            android:id="@+id/edittext_distrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Distrito"
+            android:layout_below="@id/text_distrito"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background2" />
+
+        <!-- Campo para Responsable -->
+        <TextView
+            android:id="@+id/text_responsable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Responsable"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/edittext_distrito"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <EditText
+            android:id="@+id/edittext_responsable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del Responsable"
+            android:layout_below="@id/text_responsable"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background2" />
+
+        <!-- Campo para Teléfono -->
+        <TextView
+            android:id="@+id/text_telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teléfono"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/edittext_responsable"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <EditText
+            android:id="@+id/edittext_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Teléfono del local"
+            android:layout_below="@id/text_telefono"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background2" />
+
+        <!-- Campo para Correo -->
+        <TextView
+            android:id="@+id/text_correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/edittext_telefono"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <EditText
+            android:id="@+id/edittext_correo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo del local"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/text_correo"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background2" />
+
+        <!-- Botón "Actualizar Local" -->
+        <Button
+            android:id="@+id/button_actualizar_local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualizar Local"
+            android:layout_below="@id/edittext_correo"
+            android:layout_marginTop="10dp"
+            android:padding="12dp"
+            android:background="@drawable/button_square_shape"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</ScrollView>
