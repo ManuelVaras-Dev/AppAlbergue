@@ -2,8 +2,6 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -31,11 +29,11 @@
 
         <!-- EditText para el campo de búsqueda -->
         <EditText
-            android:id="@+id/search_bar"
+            android:id="@+id/buscador"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Buscar productos o categorías"
+            android:hint="Buscar por nombre o estado"
             android:textColorHint="#A9A9A9"
             android:textColor="#000000"
             android:inputType="text"
@@ -76,7 +74,7 @@
 
             <!-- Primer ícono -->
             <ImageView
-                android:id="@+id/primer_icono"
+                android:id="@+id/irACarrito"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:src="@drawable/carrito"
@@ -157,187 +155,22 @@
     <!-- CUERPO - galeria de imagenes -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="510dp"
+        android:layout_marginTop="200dp"
+        android:fillViewport="true">
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:padding="26dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="115dp"
-            android:rowCount="3">
+            android:layout_height="match_parent"
+            android:paddingHorizontal="25dp"
+        >
 
-            <!-- Item 1 -->
-            <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="225dp"
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/item_title_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="22dp"
-                    android:text="Alimento Adultos"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"/>
-
-
-                <ImageView
-                    android:id="@+id/item_image_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="135dp"
-                    android:src="@drawable/productos_0001"
-                    android:scaleType="centerCrop"
-                    android:layout_gravity="center"/>
-
-
-                <Button
-                    android:id="@+id/agregar1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Agregar"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="7dp"
-                    android:textColor="@color/blanco"
-                    android:backgroundTint="@color/verde"
-                    android:textSize="13sp"
-                    android:paddingVertical="7dp"
-                    android:paddingHorizontal="30dp"/>
-
-            </LinearLayout>
-
-            <!-- Item 2 -->
-            <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="225dp"
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-
-                <TextView
-                    android:id="@+id/item_title_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="22dp"
-                    android:text="Alimento Cachorros"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"/>
-
-                <ImageView
-                    android:id="@+id/item_image_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="135dp"
-                    android:src="@drawable/productos_0002"
-                    android:scaleType="centerCrop"
-                    android:layout_gravity="center"/>
-
-                <Button
-                    android:id="@+id/agregar2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Agregar"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="7dp"
-                    android:textColor="@color/blanco"
-                    android:backgroundTint="@color/verde"
-                    android:textSize="13sp"
-                    android:paddingVertical="7dp"
-                    android:paddingHorizontal="30dp"/>
-
-            </LinearLayout>
-
-
-            <!-- Item 3 -->
-            <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="225dp"
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/item_title_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="22dp"
-                    android:text="Correas"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"/>
-
-
-                <ImageView
-                    android:id="@+id/item_image_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="135dp"
-                    android:src="@drawable/productos_0003"
-                    android:scaleType="centerCrop"
-                    android:layout_gravity="center"/>
-
-                <Button
-                    android:id="@+id/agregar3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Agregar"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="7dp"
-                    android:textColor="@color/blanco"
-                    android:backgroundTint="@color/verde"
-                    android:textSize="13sp"
-                    android:paddingVertical="7dp"
-                    android:paddingHorizontal="30dp"/>
-
-            </LinearLayout>
-
-            <!-- Item 4 -->
-            <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="225dp"
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-
-                <TextView
-                    android:id="@+id/item_title_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="22dp"
-                    android:text="Ropa"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"/>
-
-                <ImageView
-                    android:id="@+id/item_image_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="135dp"
-                    android:src="@drawable/productos_0004"
-                    android:scaleType="centerCrop"
-                    android:layout_gravity="center"/>
-
-                <Button
-                    android:id="@+id/agregar4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Agregar"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="7dp"
-                    android:textColor="@color/blanco"
-                    android:backgroundTint="@color/verde"
-                    android:textSize="13sp"
-                    android:paddingVertical="7dp"
-                    android:paddingHorizontal="30dp" />
-
-            </LinearLayout>
-
+            <!-- RecyclerView para mostrar los datos -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
         </GridLayout>
 
