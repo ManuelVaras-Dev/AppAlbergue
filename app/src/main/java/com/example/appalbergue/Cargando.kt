@@ -1,5 +1,6 @@
 package com.example.appalbergue
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,8 +24,14 @@ class CargandoFragment : Fragment() {
 
         // Simulación de carga (Ejemplo)
         view.postDelayed({
-            // Aquí puedes redirigir al siguiente fragmento o actividad
-            (activity as? MainActivity)?.irALogin() // Cambia a tu flujo deseado
+            // Verifica si la actividad es una instancia de MainActivity
+            val activity = activity
+            if (activity != null) {
+                val intent = Intent(activity, LoginActivity::class.java)
+                startActivity(intent)
+                activity.finish() // Opcional: Cierra la actividad actual si ya no la necesitas
+            }
         }, 2000) // Espera 2 segundos antes de cambiar
+
     }
 }
