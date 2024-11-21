@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:padding="8dp">
 
-    <!-- ImageView para mostrar la imagen del producto -->
+    <!-- Imagen del producto -->
     <ImageView
         android:id="@+id/image_view_producto"
         android:layout_width="120dp"
@@ -13,28 +13,36 @@
         android:layout_marginEnd="8dp"
         android:contentDescription="Imagen del producto" />
 
-    <!-- Contenedor vertical para el texto y el botón -->
+    <!-- Contenedor para el texto -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- TextView para mostrar el texto del producto -->
+        <!-- Nombre del producto -->
         <TextView
             android:id="@+id/text_view_producto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp" />
+            android:text="Nombre del Producto"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-        <!-- Botón de editar -->
-        <Button
-            android:id="@+id/button_edit_product"
+        <!-- Sugerencia -->
+        <TextView
+            android:id="@+id/text_view_sugerencia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Editar"
-            android:layout_marginTop="4dp"
-            android:padding="4dp" /> <!-- Ajusta el padding para hacerlo más pequeño -->
+            android:text="Sugerencia"
+            android:textSize="14sp" />
 
+        <!-- Estado -->
+        <TextView
+            android:id="@+id/text_view_estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>
