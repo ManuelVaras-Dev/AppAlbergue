@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                     // Obtener el ID del usuario creado
                     val id = auth.currentUser?.uid ?: return@addOnCompleteListener
 
-                    // Guardar datos adicionales en Realtime Database
+         // Guardar datos adicionales en Realtime Database
                     val persona = Usuario(id, nombre, apellido, correo, usuario, contraseña)
                     database.child(id).setValue(persona)
                         .addOnSuccessListener {
