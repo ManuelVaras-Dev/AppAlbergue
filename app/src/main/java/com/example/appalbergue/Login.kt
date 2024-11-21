@@ -1,32 +1,62 @@
 package com.example.appalbergue
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.Fragment
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
-class LoginFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Infla el layout del fragmento de login
-        return inflater.inflate(R.layout.login, container, false)
-    }
+class LoginActivity : AppCompatActivity() {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private lateinit var auth: FirebaseAuth
 
-        // Obtener referencias a los botones de la UI
-        val crearCuentaButton: Button = view.findViewById(R.id.crear_button)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.login) // Configura el layout de la actividad
+
+        // Inicializar la instancia de Firebase Auth
+        auth = FirebaseAuth.getInstance()
+
+        // Obtener referencias a los campos de entrada y botones de la UI
+        val editTextCorreo: EditText = findViewById(R.id.username)
+        val editTextContraseña: EditText = findViewById(R.id.password)
+        val iniciarsesion: Button = findViewById(R.id.btnIniciarSesion)
+        val crearCuentaButton: Button = findViewById(R.id.crear_button)
+
+        // Configurar la acción al hacer clic en el botón "Iniciar Sesión"
+        iniciarsesion.setOnClickListener {
+            val correo = editTextCorreo.text.toString()
+            val contraseña = editTextContraseña.text.toString()
+
+            // Verificar las credenciales en Firebase
+            verificarInicioSesion(correo, contraseña)
+        }
 
         // Configurar la acción al hacer clic en el botón "Crear Cuenta"
         crearCuentaButton.setOnClickListener {
-            // Navegar al Fragmento de Selección de Usuario Administrador
-            (activity as? MainActivity)?.irASeleccionDeUsuarioAdministrador()
+            val intent = Intent(this, com.example.crudconfirebase.MainActivity::class.java)
+            startActivity(intent)
         }
+    }
+
+    // Método para verificar las credenciales en Firebase
+    private fun verificarInicioSesion(correo: String, contraseña: String) {
+        auth.signInWithEmailAndPassword(correo, contraseña)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Inicio de sesión exitoso
+                    // Redirigir a la pantalla principal
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish() // Cierra la actividad de login para que no se pueda volver atrás
+                } else {
+                    // Si las credenciales no son correctas
+                    Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }

@@ -32,7 +32,17 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:background="@drawable/edit_text_background"
-        android:hint="Nombre completo"
+        android:hint="Nombres completos"
+        android:inputType="textPersonName"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Apellidos completos"
         android:inputType="textPersonName"
         android:padding="12dp" />
 
@@ -47,7 +57,17 @@
         android:padding="12dp" />
 
     <EditText
-        android:id="@+id/etContrasena"
+        android:id="@+id/etUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/etContraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -55,43 +75,6 @@
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:padding="12dp" />
-
-    <EditText
-        android:id="@+id/etConfirmarContrasena"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/edit_text_background"
-        android:hint="Confirmar Contraseña"
-        android:inputType="textPassword"
-        android:padding="12dp" />
-
-    <EditText
-        android:id="@+id/etTelefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/edit_text_background"
-        android:hint="Número de teléfono (opcional)"
-        android:inputType="phone"
-        android:padding="12dp" />
-
-    <EditText
-        android:id="@+id/etFechaNacimiento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/edit_text_background"
-        android:hint="Fecha de Nacimiento"
-        android:focusable="false"
-        android:padding="12dp" />
-
-    <Button
-        android:id="@+id/btnFechaNacimiento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_background"
-        android:text="Seleccionar Fecha" />
 
     <Button
         android:id="@+id/btnRegistrar"
