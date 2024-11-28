@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/degradado"
+    android:padding="16dp">
+
+    <!-- Título de la app -->
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AdoptaFeliz"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Mensaje de bienvenida -->
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Que haremos el dia de hoy?"
+        android:textSize="16sp"
+        android:textColor="#574E4E"
+        app:layout_constraintTop_toBottomOf="@id/app_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="189dp"
+        android:layout_height="110dp"
+        android:src="@drawable/administrador"
+        app:layout_constraintTop_toBottomOf="@id/welcome_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnOpcion1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ir a Opción 1"
+        android:backgroundTint="#FF7F50"
+        android:textColor="#FFF"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnOpcion2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ir a Opción 2"
+        android:backgroundTint="#FFD700"
+        android:textColor="#8A2BE2"
+        app:layout_constraintTop_toBottomOf="@id/btnOpcion1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnOpcion3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ir a Opción 3"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFF"
+        app:layout_constraintTop_toBottomOf="@id/btnOpcion2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnOpcion4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ir a Opción 4"
+        android:backgroundTint="#F85F6A"
+        android:textColor="#FFF"
+        app:layout_constraintTop_toBottomOf="@id/btnOpcion3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

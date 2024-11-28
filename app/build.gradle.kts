@@ -44,8 +44,13 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.database)
+<<<<<<< HEAD
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.firestore.ktx)
+=======
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.auth.ktx)
+>>>>>>> 4f16d03 (Login0.1)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

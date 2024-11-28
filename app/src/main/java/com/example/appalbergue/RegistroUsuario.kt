@@ -1,4 +1,4 @@
-package com.example.crudconfirebase
+package com.example.appalbergue
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,14 +6,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.appalbergue.LoginActivity
+import com.example.appalbergue.MenuPrincipalActivity
 import com.example.appalbergue.R
 import com.example.crudconfirebase.model.Usuario
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class MainActivity : AppCompatActivity() {
+class RegistroUsuarioMainActivity : AppCompatActivity() {
 
     private lateinit var edtNombre: EditText
     private lateinit var edtApellido: EditText
@@ -67,14 +67,14 @@ class MainActivity : AppCompatActivity() {
                     // Obtener el ID del usuario creado
                     val id = auth.currentUser?.uid ?: return@addOnCompleteListener
 
-         // Guardar datos adicionales en Realtime Database
+                    // Guardar datos adicionales en Realtime Database
                     val persona = Usuario(id, nombre, apellido, correo, usuario, contraseña)
                     database.child(id).setValue(persona)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
                             clearFields()
-                            // Redirigir al login
-                            val intent = Intent(this, LoginActivity::class.java)
+                            // Redirigir al menu principal
+                            val intent = Intent(this, MenuPrincipalActivity::class.java)
                             startActivity(intent)
                             finish()
                         }

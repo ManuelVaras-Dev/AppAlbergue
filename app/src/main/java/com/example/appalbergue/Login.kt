@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Configurar la acción al hacer clic en el botón "Crear Cuenta"
         crearCuentaButton.setOnClickListener {
-            val intent = Intent(this, com.example.crudconfirebase.MainActivity::class.java)
+            val intent = Intent(this, com.example.appalbergue.RegistroUsuarioMainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Inicio de sesión exitoso
                     // Redirigir a la pantalla principal
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, MenuPrincipalActivity::class.java)
                     startActivity(intent)
                     finish() // Cierra la actividad de login para que no se pueda volver atrás
                 } else {
