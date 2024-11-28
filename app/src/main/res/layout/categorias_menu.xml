@@ -75,22 +75,14 @@
             <!-- Primer ícono -->
             <ImageView
                 android:id="@+id/irACarrito"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
                 android:src="@drawable/carrito"
                 app:tint="@color/verde"
                 android:contentDescription="Primer ícono"
                 android:layout_marginEnd="16dp" />
 
-            <!-- Segundo ícono -->
-            <ImageView
-                android:id="@+id/segundo_icono"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/favorito"
-                app:tint="@color/verde"
-                android:contentDescription="Segundo ícono"
-                android:layout_marginEnd="16dp" />
+
         </LinearLayout>
     </LinearLayout>
 

@@ -70,7 +70,7 @@
 
                 <!-- Botón de restar cantidad -->
                 <Button
-                    android:id="@+id/button_decrease1"
+                    android:id="@+id/btnDecrementar"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="8dp"
@@ -94,7 +94,7 @@
 
                 <!-- Botón de aumentar cantidad -->
                 <Button
-                    android:id="@+id/button_increase1"
+                    android:id="@+id/btnIncrementar"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:background="@drawable/boton_circular"

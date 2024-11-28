@@ -29,21 +29,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <!-- ícono favoritos -->
-            <ImageView
-                android:id="@+id/segundo_icono"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/favorito"
-                app:tint="@color/verde"
-                android:contentDescription="Segundo ícono"
-                android:layout_marginEnd="16dp" />
-        </LinearLayout>
     </LinearLayout>
 
 
@@ -53,16 +39,16 @@
     <!-- BOTONES -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="485dp"
+        android:layout_marginTop="57dp"
+        android:fillViewport="true">
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="25dp"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:columnCount="1"
-            android:padding="35dp"
-            android:rowCount="1">
+            >
 
             <!-- RecyclerView for dynamic product list -->
             <androidx.recyclerview.widget.RecyclerView
@@ -72,8 +58,6 @@
                 android:layout_marginTop="40dp"/>
 
 
-
-carrito
 
         </GridLayout>
 
@@ -85,7 +69,7 @@ carrito
         android:columnCount="1"
         android:padding="47dp"
         android:layout_gravity="center"
-        android:layout_marginTop="215dp"  >
+        android:layout_marginTop="242dp"  >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -96,7 +80,7 @@ carrito
 
 
             <Button
-                android:id="@+id/donate_continuar"
+                android:id="@+id/btnContinuar"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Continuar"
@@ -109,7 +93,7 @@ carrito
                 android:paddingHorizontal="75dp"/>
 
             <Button
-                android:id="@+id/donate_regresar"
+                android:id="@+id/btnRegresar"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Regresar"

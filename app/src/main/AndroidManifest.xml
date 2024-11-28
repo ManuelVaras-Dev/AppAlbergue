@@ -40,6 +40,12 @@
         <activity
             android:name=".ProductosDonacionCarrito"
             android:exported="true" />
+        <activity
+            android:name=".DonacionRegistro"
+            android:exported="true" />
+        <activity
+            android:name=".DonacionExitoza"
+            android:exported="true" />
     </application>
 
 </manifest>
