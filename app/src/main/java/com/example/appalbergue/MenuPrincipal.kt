@@ -11,20 +11,25 @@ class MenuPrincipalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menuprincipal)
 
-        // Referencias dinámicas a los botones
-        val buttonIds = listOf(
-            R.id.btnOpcion1,
-            R.id.btnOpcion2,
-            R.id.btnOpcion3,
-            R.id.btnOpcion4
-        )
+        // Configurar acciones específicas para cada botón
+        findViewById<Button>(R.id.btnOpcion1).setOnClickListener {
+            val intent = Intent(this, ListarProducto::class.java)
+            startActivity(intent)
+        }
 
-        // Configurar acciones para cada botón
-        buttonIds.forEach { buttonId ->
-            findViewById<Button>(buttonId).setOnClickListener {
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-            }
+        findViewById<Button>(R.id.btnOpcion2).setOnClickListener {
+            val intent = Intent(this, ProductosDonacion::class.java) // Reemplaza con la actividad correspondiente
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.btnOpcion3).setOnClickListener {
+            val intent = Intent(this, RegistroLocal::class.java) // Reemplaza con la actividad correspondiente
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.btnOpcion4).setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java) // Reemplaza con la actividad correspondiente
+            startActivity(intent)
         }
     }
 }

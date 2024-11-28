@@ -74,7 +74,7 @@ class RegistroUsuarioMainActivity : AppCompatActivity() {
                             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
                             clearFields()
                             // Redirigir al menu principal
-                            val intent = Intent(this, MenuPrincipalActivity::class.java)
+                            val intent = Intent(this, LoginActivity::class.java)
                             startActivity(intent)
                             finish()
                         }
