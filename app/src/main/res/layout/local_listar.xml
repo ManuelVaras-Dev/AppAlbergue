@@ -24,15 +24,16 @@
         android:layout_below="@id/text_listado_locales"
         android:layout_margin="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background2" />
+        android:background="@drawable/edittext_background" />
 
     <!-- Lista de Locales -->
-    <ListView
-        android:id="@+id/list_view_locales"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_above="@+id/button_add_local"
         android:layout_below="@id/edit_text_search_local"
+        android:layout_above="@id/button_add_local"
         android:layout_margin="16dp" />
 
     <!-- Botón "Agregar Local" en la parte inferior -->
