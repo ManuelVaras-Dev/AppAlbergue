@@ -23,12 +23,12 @@
 
         <!-- Actividad de registro de producto -->
         <activity
-            android:name=".RegistroProducto"
+            android:name=".RegistroLocal"
             android:exported="false" />
 
         <!-- Actividad de productos para donación -->
         <activity
-            android:name=".ProductosDonacion"
+            android:name=".ListarLocal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
