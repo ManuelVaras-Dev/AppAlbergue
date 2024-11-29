@@ -23,12 +23,12 @@ class MenuPrincipalActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnOpcion3).setOnClickListener {
-            val intent = Intent(this, RegistroLocal::class.java) // Reemplaza con la actividad correspondiente
+            val intent = Intent(this, ListarLocal::class.java) // Reemplaza con la actividad correspondiente
             startActivity(intent)
         }
 
         findViewById<Button>(R.id.btnOpcion4).setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java) // Reemplaza con la actividad correspondiente
+            val intent = Intent(this, RegistroRescate::class.java) // Reemplaza con la actividad correspondiente
             startActivity(intent)
         }
     }

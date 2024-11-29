@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
 }
 
@@ -47,8 +47,10 @@ dependencies {
 
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.firebase.storage.ktx)
 
-    implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.database)
     implementation(libs.firebase.auth.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -57,4 +59,7 @@ dependencies {
 
     // Agregar Glide para cargar imágenes
     implementation(libs.glide)
+
+    implementation(libs.google.maps)  // Esto está referenciando la dependencia definida en `libs.versions.toml`
+    implementation(libs.google.location)
 }

@@ -86,13 +86,13 @@
         android:id="@+id/btnOpcion4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Ir a Opción 4"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#F85F6A"
+        android:text="Rescate"
         android:textColor="#FFF"
-        app:layout_constraintTop_toBottomOf="@id/btnOpcion3"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOpcion3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

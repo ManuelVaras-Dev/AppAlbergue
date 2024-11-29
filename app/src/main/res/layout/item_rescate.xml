@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <!-- Imagen de perfil -->
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="left"
+        android:src="@drawable/place_holder_imagen"
+        android:contentDescription="Imagen de perfil"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Nombre del registro -->
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre" />
+
+    <!-- Celular del registro -->
+    <TextView
+        android:id="@+id/txtCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celular" />
+
+    <!-- Correo del registro -->
+    <TextView
+        android:id="@+id/txtCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo" />
+
+    <!-- Vista previa de la ubicación -->
+    <LinearLayout
+        android:id="@+id/locationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/txtUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:textSize="14sp" />
+
+        <!-- Vista previa del mapa -->
+        <FrameLayout
+            android:id="@+id/mapPreviewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@android:color/darker_gray"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Muestra de mapa (Placeholder o Fragmento de Google Maps) -->
+            <ImageView
+                android:id="@+id/mapPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map_placeholder" />
+
+            <!-- Botón para expandir -->
+            <ImageButton
+                android:id="@+id/btnExpandMap"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_fullscreen_24"
+                android:contentDescription="Expandir mapa"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
